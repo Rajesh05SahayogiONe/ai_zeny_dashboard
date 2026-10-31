@@ -7,6 +7,22 @@ No Boss data layer, no administration console, no tenant/org management screens.
 Open this zip in your next Next.js project and hand `PROMPT.md` (in this zip) to Claude —
 it tells Claude exactly what to inject and what to replace.
 
+## Getting started
+
+Needs Node.js 20+.
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000
+
+Other scripts: `npm run build` (production build), `npm start` (serve the build), `npm run typecheck`.
+
+No `.env` file is needed. All data is static sample data (`api/workspace.data.ts`, `boss-bridge/sample.ts`) and the
+assistant and buttons are UI only. More detail in `RUN.md`.
+
 ## Folders
 
 | Folder | What's in it | Boss-specific — replace before/while using |
