@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
+    "paths": {
+      "@boss/sdk": ["host/boss-sdk.ts"],
+      "@bridge/*": ["boss-bridge/*"],
+      "@/lib/launcher-apps": ["boss-bridge/launcher-apps.ts"],
+      "@/lib/use-launcher-state": ["boss-bridge/use-launcher-state.ts"],
+      "@/lib/utils": ["common/utils.ts"],
+      "@/lib/use-single-flight-transition": ["common/use-single-flight-transition.ts"],
+      "@/lib/user-display": ["common/user-display.ts"],
+      "@/lib/open-window": ["common/open-window.ts"],
+      "@/lib/auth": ["host/auth.ts"],
+      "@/lib/audit-action-label": ["host/audit-action-label.ts"],
+      "@/modules/auth/api/auth.api": ["host/auth.api.ts"],
+      "@/modules/workspace": ["host/workspace.ts"],
+      "@/modules/self-service-portal/nav": ["host/self-service-nav.ts"],
+      "@/modules/self-service-portal/routes": ["host/self-service-routes.ts"],
+      "@/modules/administration/routes": ["host/administration-routes.ts"],
+      "@/providers/query-provider": ["host/query-provider.tsx"],
+      "@/components/dashboard/charts/*": ["dashboard/charts/*"],
+      "@/components/dashboard/*": ["dashboard/components/*"],
+      "@/components/ui/*": ["common/ui/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx", "types/sdk-*.ts", "theme/layout.tsx"]
+}
